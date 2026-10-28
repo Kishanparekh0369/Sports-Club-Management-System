@@ -1,0 +1,150 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'react-toastify/dist/ReactToastify.css';
+@import './variables.css';
+
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface-light);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent-lime);
+  color: #ffffff;
+}
+
+/* Common Utilities */
+.bg-navy {
+  background-color: var(--color-primary-navy) !important;
+  color: #ffffff;
+}
+
+.bg-navy-dark {
+  background-color: var(--color-navy-dark) !important;
+  color: #ffffff;
+}
+
+.text-navy {
+  color: var(--color-primary-navy) !important;
+}
+
+.text-lime {
+  color: var(--color-accent-lime) !important;
+}
+
+.text-orange {
+  color: var(--color-accent-orange) !important;
+}
+
+.bg-lime-subtle {
+  background-color: var(--color-accent-lime-light) !important;
+  color: var(--color-accent-lime-hover) !important;
+}
+
+.bg-orange-subtle {
+  background-color: var(--color-accent-orange-light) !important;
+  color: var(--color-accent-orange-hover) !important;
+}
+
+.bg-blue-subtle {
+  background-color: var(--color-accent-blue-light) !important;
+  color: var(--color-accent-blue) !important;
+}
+
+.card-custom {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-custom:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-glass {
+  background: rgba(28, 37, 65, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.badge-pill {
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.85rem;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}

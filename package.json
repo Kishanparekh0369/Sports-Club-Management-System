@@ -1,0 +1,28 @@
+{
+  "name": "elite-sports-club",
+  "version": "1.0.0",
+  "description": "Elite Sports Club Management System - Premium MERN Stack Web Application",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "start": "npm --prefix server start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "keywords": [
+    "mern",
+    "sports-club",
+    "management-system",
+    "react",
+    "express",
+    "mongodb",
+    "node"
+  ],
+  "author": "Elite Sports Club Engineering Team",
+  "license": "ISC"
+}

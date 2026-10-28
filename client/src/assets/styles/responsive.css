@@ -1,0 +1,103 @@
+/* Responsive Viewports Stylesheet */
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 991.98px) {
+  /* Admin & Member Sidebars become Offcanvas Drawers */
+  .dashboard-sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .dashboard-sidebar.show-mobile {
+    transform: translateX(0);
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .dashboard-header {
+    padding: 0.85rem 1rem;
+  }
+
+  .dashboard-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .pricing-card.popular {
+    transform: none;
+  }
+}
+
+/* Small Screens / Mobile phones (375px - 576px) */
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 3.5rem 0;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.75rem 1.25rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-card {
+    padding: 1.1rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .table-custom-wrapper {
+    overflow-x: auto;
+  }
+
+  .table-custom th, .table-custom td {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-athletic {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .member-welcome-banner {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .public-footer {
+    padding: 3rem 0 1.5rem;
+  }
+}
+
+/* Overlay for Mobile Sidebar Drawer */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 1035;
+}

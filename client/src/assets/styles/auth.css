@@ -1,0 +1,124 @@
+/* Authentication Pages Styling */
+.auth-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(249, 115, 22, 0.06), transparent 40%),
+              var(--color-surface-light);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-lime), var(--color-accent-orange));
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.75rem;
+}
+
+.auth-logo span {
+  color: var(--color-accent-lime);
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  margin-bottom: 0.35rem;
+}
+
+.auth-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+/* Demo Credentials Quick-Fill Bar */
+.demo-accounts-box {
+  background-color: var(--color-surface-subtle);
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.demo-pill-btn {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.demo-pill-admin {
+  background-color: var(--color-primary-navy);
+  color: #ffffff;
+}
+.demo-pill-admin:hover {
+  background-color: #1e293b;
+}
+
+.demo-pill-member {
+  background-color: var(--color-accent-lime);
+  color: #0b132b;
+}
+.demo-pill-member:hover {
+  background-color: var(--color-accent-lime-hover);
+  color: #ffffff;
+}
+
+/* Social or Alternate Auth divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--color-text-light);
+  font-size: 0.82rem;
+}
+
+.auth-divider::before, .auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--color-surface-border);
+}
+
+.auth-divider span {
+  padding: 0 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
